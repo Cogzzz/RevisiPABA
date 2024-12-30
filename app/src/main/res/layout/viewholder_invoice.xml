@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/transactionIcon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/light_purple_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/exampleqr" />
+
+        <TextView
+            android:id="@+id/transactionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/purple_bng"
+            android:backgroundTint="@color/lightpurple"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="Transaction Title"
+            android:textColor="@color/purple"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/transactionIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transactionDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Transaction Date"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/transactionTitle"
+            app:layout_constraintTop_toBottomOf="@id/transactionTitle" />
+
+        <TextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Amount: $100"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/transactionDate"
+            app:layout_constraintTop_toBottomOf="@id/transactionDate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewDetailButton"
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/purple_button_stroke"
+            android:text="View Detail"
+            android:textColor="@color/darkPurple"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transactionIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
